@@ -19,7 +19,7 @@ const urls = [
     'https://jsonplaceholder.typicode.com/albums',
 ]
 
-Promise.all(urls.map(url => {
+Promise.all(urls.map(urls => {
     return fetch(url).then(resp => resp.json())
 })).then(results => {
     console.log(results[0])
